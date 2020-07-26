@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yah\\OneDrive\\Project\\C#\\FunToPeople\\FunToPeople\\FunToPeople.csproj": {}
+    "C:\\Users\\虚极\\Desktop\\计算机网络实验大作业\\FunToPeople-aoiasd\\FunToPeople\\FunToPeople.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yah\\OneDrive\\Project\\C#\\FunToPeople\\FunToPeople\\FunToPeople.csproj": {
+    "C:\\Users\\虚极\\Desktop\\计算机网络实验大作业\\FunToPeople-aoiasd\\FunToPeople\\FunToPeople.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yah\\OneDrive\\Project\\C#\\FunToPeople\\FunToPeople\\FunToPeople.csproj",
+        "projectUniqueName": "C:\\Users\\虚极\\Desktop\\计算机网络实验大作业\\FunToPeople-aoiasd\\FunToPeople\\FunToPeople.csproj",
         "projectName": "FunToPeople",
-        "projectPath": "C:\\Users\\yah\\OneDrive\\Project\\C#\\FunToPeople\\FunToPeople\\FunToPeople.csproj",
-        "packagesPath": "C:\\Users\\yah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yah\\OneDrive\\Project\\C#\\FunToPeople\\FunToPeople\\obj\\",
+        "projectPath": "C:\\Users\\虚极\\Desktop\\计算机网络实验大作业\\FunToPeople-aoiasd\\FunToPeople\\FunToPeople.csproj",
+        "packagesPath": "C:\\Users\\虚极\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\虚极\\Desktop\\计算机网络实验大作业\\FunToPeople-aoiasd\\FunToPeople\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\yah\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\虚极\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -59,7 +55,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

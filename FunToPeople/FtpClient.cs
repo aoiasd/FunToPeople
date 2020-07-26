@@ -76,13 +76,12 @@ namespace FunToPeople
 
 		private void turnToPasvMode()
 		{
-			sendCommand(FtpCommand.PASV);
+			 sendCommand(FtpCommand.PASV);
 
 			// 计算数据端口号
 			string[] resps = lastResponse.Split(',');
 			int dataPort = Convert.ToInt32(resps[4]) * 256 +
 				Convert.ToInt32(Regex.Match(resps[5], "[0-9]*").ToString());
-
 			dataClient = new TcpClient(Hostname, dataPort);
 			dataStream = new StreamReader(dataClient.GetStream());
 			dataByteStream = dataClient.GetStream();
@@ -122,7 +121,28 @@ namespace FunToPeople
 
 			closeDataPort();
 		}
-
+		public void FreshLocalFileList()
+		{
+			CommonData.localFileList.Clear();
+			if (CommonData.Local_Path== "") return;
+			CommonData.localFileList.Add("..");
+			string[] Directorys;
+			Directorys = Directory.GetDirectories(CommonData.Local_Path, "*.*");
+			foreach (string Directory in Directorys)
+			{
+				string[] temp = Regex.Split(Directory, @"\\");
+				CommonData.localFileList.Add(temp[temp.Length - 1]);
+			}
+			CommonData.Local_Folder = CommonData.localFileList.Count();
+			string[] Files;
+			Files = Directory.GetFiles(CommonData.Local_Path, "*.*");
+			foreach (string File in Files)
+			{
+				string[] temp = Regex.Split(File, @"\\");
+				CommonData.localFileList.Add(temp[temp.Length - 1]);
+				//CommonData.localFileList.Add(File);
+			}
+		}
 		public string Connect(string username, string password, string hostname = null)
 		{
 			if (this.Hostname == null && hostname == null)
@@ -139,7 +159,6 @@ namespace FunToPeople
 			cmdStream = new StreamReader(cmdClient.GetStream());
 			cmdByteStream = cmdClient.GetStream();
 			getResponse();
-
 			sendCommand(FtpCommand.USER, username);
 			sendCommand(FtpCommand.PASS, password);
 
