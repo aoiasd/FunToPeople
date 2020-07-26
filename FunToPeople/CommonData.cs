@@ -11,8 +11,7 @@ namespace FunToPeople
 		public static ObservableCollection<string> statusList = new ObservableCollection<string>();
 		public static ObservableCollection<string> localFileList = new ObservableCollection<string>();
 		public static ObservableCollection<string> remoteFileList = new ObservableCollection<string>();
-		public static string Local_Path= "D:\\Battle.net";
-		public static int Local_Folder;
+
 		public static void AddStatus(string status)
 		{
 			statusList.Add(status);
