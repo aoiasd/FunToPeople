@@ -21,14 +21,20 @@ namespace FunToPeople
 	/// </summary>
 	public partial class MainWindow : Window
 	{
+		private void BindData()
+		{
+			StatusListBox.ItemsSource = CommonData.statusList;
+			LocalFileListBox.ItemsSource = CommonData.localFileList;
+			RemoteFileListBox.ItemsSource = CommonData.remoteFileList;
+		}
 		public MainWindow()
 		{
 			InitializeComponent();
 
-			StatusListBox.ItemsSource = CommonData.statusList;
-
-			FtpClient ftpClient = new FtpClient();
-			ftpClient.Connect("localhost", "yah01", "FTPSERVER01");
+			BindData();
+			FtpClient ftpClient = new FtpClient("localhost");
+			ftpClient.Connect("yah01", "FTPSERVER01");
+			ftpClient.FreshFileList();
 		}
 	}
 }
